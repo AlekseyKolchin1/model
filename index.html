@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anylogic API Demo">
+    <title>Demo</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/material-icons.css">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="assets/cloud_client.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/plotly-latest.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-dark">
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="icon-menu"><span></span><span></span><span></span><span></span></div>
+    </button>
+     
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item d-md-none">
+                <span class="nav-link text-info">
+                    <i class="material-icons">rv_hookup</i>&nbsp;Transporters.
+                </span>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about-text" data-toggle="modal" data-target="#docsModal">
+                    <i class="material-icons">help_outline</i>
+                    About
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section id="home" class="section section-1 container-fluid">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="jumbotron mt-5 mt-md-0 mb-0">
+                    <h1 class="display-4">Имитационное движение транспортного потока, по существующей дорожной сети</h1>
+                    <p class="lead">Модель&nbsp;&mdash; была разработана с помощью &nbsp;программы для имитационного моделирования AnyLogic&nbsp;</p>
+                    <a class="btn btn-primary btn-lg" href="#phase-3" role="button">Start</a>
+                    <hr class="my-4">
+                    <p class="link-text">Дополнительная информация по AnyLogic Cloud <a href="https://www.anylogic.com/features/cloud/">https://www.anylogic.com/features/cloud/</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="phase-1" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в ясную погоду в ночное время суток (0:00-6:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                    <a class="btn btn-primary btn-lg" href="#phase-10" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#animation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-11" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=92ef2096-0e03-4d47-a815-c192f8424ca0"></iframe>
+    </center>  
+   
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+    <section id="phase-11" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в ясную погоду в вечернее время суток (18:00-0:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                    <a class="btn btn-primary btn-lg" href="#phase-10" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#animation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-11" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-1" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=0d83fe8b-0b13-4ad7-aace-3121aed9b21f"></iframe>
+    </center>  
+       <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+         <section id="phase-10" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в ясную погоду в утренее время суток (6:00-12:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                    <a class="btn btn-primary btn-lg" href="#phase-10" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#animation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-11" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-1" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=95e82545-44b8-45c2-b4b9-4f4e683100be"></iframe>
+    </center>  
+   
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+
+
+
+<section id="phase-3" class="section section-4 container-fluid">
+    <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            
+            <li class="breadcrumb-item active" aria-current="page">Выбор дорожной ситуации</li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 col-md-7">
+                <a href="#animation" class="d-flex justify-content-between align-items-center mb-5 type-link text-decoration-none">
+                    <div>
+                        <h2>Дорожная ситуация в ясную погоду</h2>
+                        <p class="lead"> Запустите этот эксперимент, чтобы просмотреть анимацию моделирования, и
+                            получить&nbsp;анализ&nbsp;гистограммы</p>
+                    </div>
+                    <i class="material-icons">arrow_forward</i>
+                </a>
+                <a href="#variation" id="variation-link" class="d-flex justify-content-between  align-items-center mt-5 type-link text-decoration-none">
+                    <div>
+                        <h2>Дорожная ситуация в дождливую погоду</h2>
+                         <p class="lead"> Запустите этот эксперимент, чтобы просмотреть анимацию моделирования, и
+                            получить&nbsp;анализ&nbsp;гистограммы</p>
+                    </div>
+                    <i class="material-icons">arrow_forward</i>
+                </a>
+                <a href="#variation1" id="variation-link1" class="d-flex justify-content-between  align-items-center mt-5 type-link text-decoration-none">
+                    <div>
+                        <h2>Дорожная ситуация в снежную погоду</h2>
+                         <p class="lead"> Запустите этот эксперимент, чтобы просмотреть анимацию моделирования, и
+                            получить&nbsp;анализ&nbsp;гистограммы</p>
+                    </div>
+                    <i class="material-icons">arrow_forward</i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="animation" class="section section-experiment container-fluid">
+    <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в ясную погоду в дневное время суток (12:00-18:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                    <a class="btn btn-primary btn-lg" href="#phase-10" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#animation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-11" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-1" role="button">Ночное время</a>
+                    </div>
+    <center>
+        <iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=4354f96a-2d6f-416e-b938-764d95f5dcc8"></iframe>
+     </center>  
+   
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+
+<section id="variation" class="section section-experiment container-fluid">
+       <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в дождливую погоду в дневное время суток (12:00-18:00)</li>
+        </ol>
+    </nav>
+
+     <div style="display:flex;justify-content:center;align-items:center;">
+                    <a class="btn btn-primary btn-lg" href="#phase-20" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-21" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-22" role="button">Ночное время</a>
+                    </div>
+    
+     <center>
+         <iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=9fcfb12b-7994-4fae-8090-e6b7d8fa6284"></iframe>
+   </center>
+
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+    
+    <section id="phase-22" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в дождливую погоду в ночное время суток (0:00-6:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+               <a class="btn btn-primary btn-lg" href="#phase-20" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-21" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-22" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=1cb74bbd-9ed2-491e-83b0-a2c927bec8e7"></iframe>
+        </center>  
+   
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+    <section id="phase-21" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в дождливую погоду в вечернее время суток (18:00-0:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                   <a class="btn btn-primary btn-lg" href="#phase-20" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-21" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-22" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=0d83fe8b-0b13-4ad7-aace-3121aed9b21f"></iframe>
+    </center>  
+       <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+         <section id="phase-20" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в дождливую погоду в утренее время суток (6:00-12:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                   <a class="btn btn-primary btn-lg" href="#phase-20" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-21" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-22" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=1a1ce0a7-bbd9-40c0-922c-9b019d32bd50"></iframe>
+             </center>  
+   
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+   
+    <section id="variation1" class="section section-experiment container-fluid">
+    <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в снежную погоду в дневное время суток (12:00-18:00)</li>
+        </ol>
+    </nav>
+
+        <div style="display:flex;justify-content:center;align-items:center;">
+                    <a class="btn btn-primary btn-lg" href="#phase-30" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation1" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-31" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-32" role="button">Ночное время</a>
+                    </div>
+        
+     <center>
+         <iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=9fcfb12b-7994-4fae-8090-e6b7d8fa6284"></iframe>
+   </center>
+
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+
+    
+        <section id="phase-32" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в снежную погоду в ночное время суток (0:00-6:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+               <a class="btn btn-primary btn-lg" href="#phase-30" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation1" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-31" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-32" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=e27afcba-225b-47fd-8cca-896ace31e958"></iframe>
+            </center>  
+   
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+    <section id="phase-31" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в снежную погоду в вечернее время суток (18:00-0:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                   <a class="btn btn-primary btn-lg" href="#phase-30" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation1" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-31" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-32" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=8bab2a52-e57c-4115-b6b3-c08e2196883f"></iframe>
+        </center>  
+       <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+         <section id="phase-30" class="section section-2 container-fluid">
+     <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-3">Выбор дорожной ситуации</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Дорожный траффик в снежную погоду в утренее время суток (6:00-12:00)</li>
+        </ol>
+    </nav>
+
+               <div style="display:flex;justify-content:center;align-items:center;">
+                   <a class="btn btn-primary btn-lg" href="#phase-30" role="button">Утреннее время</a>
+                    <a class="btn btn-primary btn-lg" href="#variation1" role="button">Дневное время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-31" role="button">Вечернее время</a>
+                    <a class="btn btn-primary btn-lg" href="#phase-32" role="button">Ночное время</a>
+                    </div>
+    <center>
+<iframe width="1000" height="650" allow="fullscreen" src="https://cloud.anylogic.com/assets/embed?modelId=d0095819-669a-4cf4-b572-94f85255a8ed"></iframe>
+             </center>  
+   
+    <a href="#phase-3" id="btn-animation" class="btn btn-primary btn-md-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+    
+    
+<section id="save-data" class="section section-save container-fluid d-none">
+    <nav aria-label="breadcrumb" class="ml-5 ml-md-0">
+        <ol class="breadcrumb offset-md-3 offset-lg-2">
+            <li class="breadcrumb-item"><a href="#phase-1">Setup Workstation parameters</a></li>
+            <li class="breadcrumb-item"><a href="#phase-2">Setup AGV parameters</a></li>
+            <li class="breadcrumb-item"><a href="#phase-3">Choose experiment type</a></li>
+            <li class="breadcrumb-item"><a href="#variation">Parameter Variation</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Save</li>
+        </ol>
+    </nav>
+
+    <div class="container mt-3 mt-xl-5">
+        <div class="row">
+            <div class="col-12">
+                <div id="table-result-wrapper"></div>
+
+                <p class="text-right">
+                    <a href="#file" id="btn-download" class="btn btn-success btn-lg" role="button" aria-disabled="true">
+                        <i class="material-icons">get_app</i>
+                        Download file
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#phase-3" class="btn btn-primary btn-lg btn-nav-next" role="button" aria-disabled="true">Finish</a>
+</section>
+<!-- inputs for popover -->
+<div class="popover--invisible invisible">
+    <!-- inputs for .item-4 -->
+    <div id="item-4">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Conveyor speed, m/s</span>
+            </div>
+            <input type="number" value="10" maxlength="5" minlength="1" class="form-control" aria-label="Conveyor speed" data-key="WS1 Сonveyor speed, m/s">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Capacity, items/cycle</span>
+            </div>
+            <input type="number" value="10" maxlength="5" minlength="1" class="form-control" aria-label="Numbers of items" data-key="WS1 Quantity processed at a time">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cycle time, min</span>
+            </div>
+            <input type="number" value="10" min="1" step="0.5" maxlength="5" minlength="1" class="form-control" aria-label="Cycle time, min" data-key="WS1 Station processing time, min">
+        </div>
+    </div>
+
+    <div id="item-5">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Conveyor speed, m/s</span>
+            </div>
+            <input type="number" value="10" maxlength="5" minlength="1" class="form-control" aria-label="Conveyor speed" data-key="WS2 Сonveyors speed, m/s">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Capacity, items/cycle</span>
+            </div>
+            <input type="number" value="10" maxlength="5" minlength="1" class="form-control" aria-label="Numbers of items" data-key="WS2 Number of items processed on a station">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cycle time, min</span>
+            </div>
+            <input type="number" value="4" min="1" step="0.5" maxlength="5" minlength="1" class="form-control" aria-label="Cycle time, min" data-key="WS2 Stations processing time, min">
+        </div>
+    </div>
+
+    <div id="item-8">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cycle time, min</span>
+            </div>
+            <input type="number" value="3" min="1" step="0.5" maxlength="5" minlength="1" class="form-control" aria-label="Cycle time, min" data-key="St1 Processing time, min">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Capacity, items/cycle</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Items processed at a time" data-key="St1 Items processed at a time">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Reorder level</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Reorder level" data-key="St1 Reorder level">
+        </div>
+    </div>
+
+    <div id="item-9">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cycle time, min</span>
+            </div>
+            <input type="number" value="3" min="1" step="0.5" maxlength="5" minlength="1" class="form-control" aria-label="Cycle time, min" data-key="St2 Processing time, min">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Capacity, items/cycle</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Items processed at a time" data-key="St2 Items processed at a time">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Reorder level</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Reorder level" data-key="St2 Reorder level">
+        </div>
+    </div>
+
+    <div id="item-10">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cycle time, min</span>
+            </div>
+            <input type="number" value="3" min="1" step="0.5" maxlength="5" minlength="1" class="form-control" aria-label="Cycle time, min" data-key="St3 Processing time, min">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Capacity, items/cycle</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Items processed at a time" data-key="St3 Items processed at a time">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Reorder level</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Reorder level" data-key="St3 Reorder level">
+        </div>
+    </div>
+
+    <div id="item-11">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Cycle time, min</span>
+            </div>
+            <input type="number" value="3" min="1" step="0.5" maxlength="5" minlength="1" class="form-control" aria-label="Cycle time, min" data-key="St4 Processing time, min">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Capacity, items/cycle</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Items processed at a time" data-key="St4 Items processed at a time">
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Reorder level</span>
+            </div>
+            <input type="number" value="3" min="1" maxlength="2" minlength="1" class="form-control" aria-label="Reorder level" data-key="St4 Reorder level">
+        </div>
+    </div>
+
+    <div id="item-12">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Speed, m/s</span>
+            </div>
+            <input type="number" value="10" maxlength="5" minlength="1" class="form-control" aria-label="Conveyor speed" data-key="WS3 Сonveyor speed, m/s">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="docsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="docsModalTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="docsModalContent"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-content--invisible invisible">
+    <div id="about-text">
+        <p>AnyLogic API demo is a web service that allows you to configure and run models online from a web browser on any device,
+            including phones and tablets, and share the models with other users.</p>
+        <p>The AnyLogic API demo experience starts in the desktop application where you define inputs and outputs
+            of the model using the API demo interface.</p>
+        <p>It is executed remotely and leverages high performance cloud computing by utilizing as many nodes in parallel as needed.</p>
+    </div>
+    <div id="manual-text">
+        <p>With AnyLogic API demo, you can:</p>
+        <ul>
+            <li>Configure experiment parameters in teams using version control.</li>
+            <li>View model animation.</li>
+            <li>Create custom dashboards to analyze outputs and key metrics.</li>
+        </ul>
+        <p>AnyLogic API demo takes collaboration to the next level, allowing you to easily share models with anyone, discuss scenarios, and securely store them for future use.</p>
+    </div>
+    <div id="terms-text">
+        <p>Please read all of the following software as a service agreement (“agreement”) carefully as it contains
+            information regarding your legal rights, remedies, and obligations. these include various limitations,
+            exclusions, and obligations to comply with applicable laws and regulations.</p>
+        <p>This agreement is a legally binding agreement between Anylogic North America, llc, (“AnyLogic”) and you
+            and/or the entity you represent (“you” OR “Client”). Anylogic is willing to provide you access to anylogic’s
+            cloud-based service only on the condition that you accept and agree to comply with all of the terms and conditions of this agreement.
+            If you are an individual using the service, “client” refers to you individually; if you are accessing the service on behalf of an entity,
+            “client” refers to that entity. each may be referred to as the “party” or, collectively, as the “parties.”</p>
+        <p>By accessing or using the service, you represent that you are duly authorized to enter into this agreement
+            and that you accept and agree to be bound by the terms and conditions of this agreement.
+            If you do not accept and agree to be bound by this agreement, do not use the service.</p>
+    </div>
+</div>
+
+<script src="js/cloud.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
